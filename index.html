@@ -21,7 +21,7 @@ nav{
 }
 nav a{
     color:white;
-    margin:0 15px;
+    margin:0 20px;
     text-decoration:none;
     font-weight:bold;
 }
@@ -31,20 +31,39 @@ nav a:hover{
 
 /* Başlık */
 header{
-    padding:80px 20px;
+    padding:60px 20px;
 }
 header h1{
-    font-size:50px;
-    animation: glow 2s infinite alternate;
-}
-@keyframes glow{
-    from{ text-shadow:0 0 10px #00b4d8; }
-    to{ text-shadow:0 0 25px #00b4d8; }
+    font-size:48px;
+    text-shadow:0 0 20px #00b4d8;
 }
 
-/* Bölümler */
+/* Bölüm */
 .section{
     padding:60px 20px;
+}
+
+/* Kutular */
+.box-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+.box{
+    background:#001f3f;
+    width:280px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,180,216,0.5);
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(0,180,216,0.9);
 }
 
 /* Buton */
@@ -56,22 +75,10 @@ button{
     font-size:16px;
     cursor:pointer;
     border-radius:8px;
-    transition:0.3s;
+    margin-top:20px;
 }
 button:hover{
     background:#0096c7;
-    transform:scale(1.05);
-}
-
-/* Drone Animasyon */
-.drone{
-    font-size:40px;
-    animation: fly 4s infinite ease-in-out;
-}
-@keyframes fly{
-    0%{ transform:translateY(0px); }
-    50%{ transform:translateY(-20px); }
-    100%{ transform:translateY(0px); }
 }
 
 footer{
@@ -86,42 +93,54 @@ footer{
 
 <nav>
     <a href="#bizkimiz">Biz Kimiz</a>
-    <a href="#hedef">Hedefimiz</a>
-    <a href="#sponsor">Sponsorluk</a>
+    <a href="#sponsor">Sponsorluk Paketleri</a>
 </nav>
 
 <header>
-    <div class="drone">🚀</div>
     <h1>TULPAR DRONE</h1>
-    <p>Afet bölgeleri için havadan aydınlatma sistemi</p>
+    <p>Afet Bölgeleri İçin Havadan Aydınlatma Sistemi</p>
 </header>
 
+<!-- 1️⃣ BİZ KİMİZ -->
 <div class="section" id="bizkimiz">
     <h2>Biz Kimiz?</h2>
     <p>
-        TULPAR ekibi olarak afet ve acil durumlarda hızlı aydınlatma sağlayan
-        kablolu drone sistemi geliştiriyoruz.
+        TULPAR ekibi olarak deprem, arama kurtarma ve olay yerlerinde
+        hızlı ve güvenli aydınlatma sağlayan kablolu drone sistemi geliştiriyoruz.
+        Amacımız jeneratör kurulumuna gerek kalmadan güçlü ışık sağlamaktır.
     </p>
 </div>
 
-<div class="section" id="hedef">
-    <h2>Hedefimiz</h2>
-    <p>
-        Deprem, arama kurtarma ve olay yerlerinde
-        jeneratör beklemeden güvenli ve güçlü ışık sağlamak.
-    </p>
-</div>
-
+<!-- 2️⃣ SPONSORLUK PAKETLERİ -->
 <div class="section" id="sponsor">
-    <h2>Sponsorluk</h2>
-    <p>Projemize destek olmak için sponsorluk dosyamızı inceleyebilirsiniz.</p>
+    <h2>Sponsorluk Paketleri</h2>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Bronz Sponsor</h3>
+            <p>Logo sosyal medya paylaşımlarında yer alır.</p>
+        </div>
+
+        <div class="box">
+            <h3>Gümüş Sponsor</h3>
+            <p>Logo drone üzerinde ve sunumlarda yer alır.</p>
+        </div>
+
+        <div class="box">
+            <h3>Altın Sponsor</h3>
+            <p>Ana sponsor olarak tüm platformlarda görünürlük sağlanır.</p>
+        </div>
+
+    </div>
 
     <br><br>
 
-    <!-- BURASI ÖNEMLİ -->
+    <!-- PDF BUTONU -->
     <a href="tulpar-sponsorluk-dosyasi.pdf" target="_blank">
-        <button>Sponsorluk Dosyasını Görüntüle</button>
+        <button>Sponsorluk Dosyasını Aç</button>
     </a>
+
 </div>
 
 <footer>
