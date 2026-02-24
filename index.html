@@ -3,163 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TULPAR İHA Projesi</title>
+<title>TULPAR DRONE</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0f172a;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to bottom,#000814,#001d3d);
     color:white;
-}
-
-header{
     text-align:center;
-    padding:40px 20px;
-    background:#111827;
 }
 
+/* Üst Menü */
+nav{
+    background:#000;
+    padding:15px;
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{
+    color:#00b4d8;
+}
+
+/* Başlık Alanı */
+header{
+    padding:80px 20px;
+}
+header h1{
+    font-size:50px;
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow{
+    from{ text-shadow:0 0 10px #00b4d8; }
+    to{ text-shadow:0 0 25px #00b4d8; }
+}
+
+/* Bölümler */
 .section{
     padding:60px 20px;
-    max-width:1100px;
-    margin:auto;
 }
 
-h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.card-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-}
-
-.card{
-    background:white;
-    color:black;
-    width:260px;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+/* Buton */
+button{
+    padding:12px 25px;
+    background:#00b4d8;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:8px;
     transition:0.3s;
 }
+button:hover{
+    background:#0096c7;
+    transform:scale(1.05);
+}
 
-.card:hover{
-    transform:translateY(-8px);
+/* Drone Emoji Animasyon */
+.drone{
+    font-size:40px;
+    animation: fly 4s infinite ease-in-out;
+}
+@keyframes fly{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-20px); }
+    100%{ transform:translateY(0px); }
 }
 
 footer{
-    background:#111827;
-    text-align:center;
+    background:#000;
     padding:20px;
-    margin-top:60px;
+    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="#bizkimiz">Biz Kimiz</a>
+    <a href="#hedef">Hedefimiz</a>
+    <a href="#sponsor">Sponsorluk</a>
+</nav>
+
 <header>
-    <h1>TULPAR İHA Aydınlatma Sistemi</h1>
-    <p>Teknofest Projesi</p>
+    <div class="drone">🚀</div>
+    <h1>TULPAR DRONE</h1>
+    <p>Afet bölgeleri için havadan aydınlatma sistemi</p>
 </header>
 
-<!-- PROJE TANITIM -->
-<div class="section">
-    <h2>Proje Hakkında</h2>
-    <p style="text-align:center;">
-        TULPAR İHA sistemi afet bölgelerinde, suç mahallerinde ve arama kurtarma çalışmalarında 
-        hızlı ve güvenilir havadan aydınlatma sağlamak amacıyla geliştirilmiştir.
+<div class="section" id="bizkimiz">
+    <h2>Biz Kimiz?</h2>
+    <p>
+        TULPAR ekibi olarak afet ve acil durumlarda hızlı aydınlatma sağlayan
+        kablolu drone sistemi geliştiriyoruz.
     </p>
 </div>
 
-<!-- SPONSORLUK -->
-<div class="section">
-    <h2>Sponsorluk</h2>
-    <p style="text-align:center;">
-        Projemize destek olacak teknoloji ve yemek firmaları ile iş birliği yapmayı hedefliyoruz.
-        Sponsorluk desteği ile sistemimizin geliştirilmesi ve yarışmalara katılımı sağlanacaktır.
+<div class="section" id="hedef">
+    <h2>Hedefimiz</h2>
+    <p>
+        Deprem, arama kurtarma ve olay yerlerinde
+        jeneratör beklemeden güvenli ve güçlü ışık sağlamak.
     </p>
 </div>
 
-<!-- TAKIM ÜYELERİ -->
-<div class="section">
-    <h2>Takım Üyelerimiz</h2>
-
-    <div class="card-container">
-
-        <div class="card">
-            <h3>Melih Işık Ayhan</h3>
-            <p>Elektrik Elektronik alanında eğitim görmektedir.</p>
-            <p>İHA sistemi elektrik elektronik bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Alperen Uçar</h3>
-            <p>DeneYap’tan mezun olmuştur.</p>
-            <p>İHA sistemi elektrik elektronik bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Feyza Şahin</h3>
-            <p>İHA sistemi elektrik elektronik bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ecrin Zeynep Çıkar</h3>
-            <p>DeneYap’tan mezun olmuştur.</p>
-            <p>İHA sistemi yazılım bölümünde görev almaktadır.</p>
-            <p>Takım organizasyon ve koordinasyonundan sorumludur.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ömer Faruk Kanlıcı</h3>
-            <p>İHA sistemi yazılım bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Muhammed Emin Gökçe</h3>
-            <p>İHA sistemi yazılım bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Azra Yıldız</h3>
-            <p>İHA sistemi mekanik tasarım bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Emir Yiğit Topar</h3>
-            <p>İHA sistemi mekanik tasarım bölümünde görev almaktadır.</p>
-        </div>
-
-        <div class="card">
-            <h3>Mohammad Salah</h3>
-            <p>İHA sistemi yazılım bölümünde görev almaktadır.</p>
-        </div>
-
-    </div>
-</div>
+<div class="section" id="sponsor">
     <h2>Sponsorluk</h2>
-<p>Projemizin sponsorluk dosyasını indirebilirsiniz.</p>
+    <p>Projemize destek olmak için sponsorluk dosyamızı inceleyebilirsiniz.</p>
 
-<a href="./sponsorluk.pdf" target="_blank">
-Sponsorluk Dosyasını Aç
-</a>
+    <br><br>
+
+    <a href="tulpar-sponsorluk.pdf" target="_blank">
+        <button>Sponsorluk Dosyasını Görüntüle</button>
+    </a>
+</div>
 
 <footer>
-    © 2026 TULPAR İHA Takımı
+    © 2026 TULPAR DRONE TEAM
 </footer>
-    <h2>Sponsorluk</h2>
-
-<a href="sponsorluk.pdf" target="_blank">
-Sponsorluk Dosyasını Aç
-</a>
 
 </body>
 </html>
-
-
