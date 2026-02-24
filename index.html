@@ -3,111 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TULPAR DRONE</title>
+<title>Tulpar Sponsorluk</title>
 
 <style>
 body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
     margin:0;
     font-family:Arial, sans-serif;
-    background:linear-gradient(to bottom,#000814,#001d3d);
+}
+
+/* Mavi Kare Buton */
+.button{
+    background:#2563eb;
     color:white;
+    width:250px;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
     text-align:center;
 }
 
-nav{
-    background:#000;
-    padding:15px;
-}
-nav a{
-    color:white;
-    margin:0 20px;
-    text-decoration:none;
-    font-weight:bold;
-}
-nav a:hover{
-    color:#00b4d8;
-}
-
-header{
-    padding:60px 20px;
-}
-header h1{
-    font-size:48px;
-    text-shadow:0 0 20px #00b4d8;
-}
-
-.section{
-    padding:60px 20px;
-}
-
-.box{
-    background:#001f3f;
-    width:300px;
-    margin:30px auto;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 0 20px rgba(0,180,216,0.7);
-}
-
-button{
-    padding:12px 25px;
-    background:#00b4d8;
-    border:none;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    border-radius:8px;
-}
-button:hover{
-    background:#0096c7;
-}
-
-footer{
-    background:#000;
-    padding:20px;
-    margin-top:40px;
+.button:hover{
+    background:#1e40af;
+    transform:scale(1.05);
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<nav>
-    <a href="#bizkimiz">Biz Kimiz</a>
-    <a href="#sponsor">Sponsorluk</a>
-</nav>
-
-<header>
-    <h1>TULPAR DRONE</h1>
-    <p>Afet Bölgeleri İçin Havadan Aydınlatma Sistemi</p>
-</header>
-
-<div class="section" id="bizkimiz">
-    <h2>Biz Kimiz?</h2>
-    <p>
-        TULPAR ekibi olarak deprem ve acil durumlarda
-        hızlı havadan aydınlatma sağlayan drone sistemi geliştiriyoruz.
-    </p>
+<div class="button" onclick="openPDF()">
+TULPAR<br>Sponsorluk Dosyası
 </div>
 
-<div class="section" id="sponsor">
-    <h2>Sponsorluk</h2>
-
-    <div class="box">
-        <p>Projemize destek olmak için sponsorluk dosyamızı inceleyebilirsiniz.</p>
-
-        <br>
-
-        <a href="./tulpar-sponsorluk-dosyasi.pdf" target="_blank">
-            <button>Sponsorluk Dosyasını Aç</button>
-        </a>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 TULPAR DRONE TEAM
-</footer>
+<script>
+function openPDF(){
+    window.open("sponsorluk.pdf","_blank");
+}
+</script>
 
 </body>
 </html>
