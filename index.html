@@ -14,7 +14,6 @@ body{
     text-align:center;
 }
 
-/* Menü */
 nav{
     background:#000;
     padding:15px;
@@ -29,7 +28,6 @@ nav a:hover{
     color:#00b4d8;
 }
 
-/* Başlık */
 header{
     padding:60px 20px;
 }
@@ -38,35 +36,19 @@ header h1{
     text-shadow:0 0 20px #00b4d8;
 }
 
-/* Bölüm */
 .section{
     padding:60px 20px;
 }
 
-/* Kutular */
-.box-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-    margin-top:30px;
-}
-
 .box{
     background:#001f3f;
-    width:280px;
+    width:300px;
+    margin:30px auto;
     padding:25px;
     border-radius:12px;
-    box-shadow:0 0 15px rgba(0,180,216,0.5);
-    transition:0.3s;
+    box-shadow:0 0 20px rgba(0,180,216,0.7);
 }
 
-.box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(0,180,216,0.9);
-}
-
-/* Buton */
 button{
     padding:12px 25px;
     background:#00b4d8;
@@ -75,7 +57,6 @@ button{
     font-size:16px;
     cursor:pointer;
     border-radius:8px;
-    margin-top:20px;
 }
 button:hover{
     background:#0096c7;
@@ -93,7 +74,7 @@ footer{
 
 <nav>
     <a href="#bizkimiz">Biz Kimiz</a>
-    <a href="#sponsor">Sponsorluk Paketleri</a>
+    <a href="#sponsor">Sponsorluk</a>
 </nav>
 
 <header>
@@ -101,45 +82,26 @@ footer{
     <p>Afet Bölgeleri İçin Havadan Aydınlatma Sistemi</p>
 </header>
 
-<!-- 1️⃣ BİZ KİMİZ -->
 <div class="section" id="bizkimiz">
     <h2>Biz Kimiz?</h2>
     <p>
-        TULPAR ekibi olarak deprem, arama kurtarma ve olay yerlerinde
-        hızlı ve güvenli aydınlatma sağlayan kablolu drone sistemi geliştiriyoruz.
-        Amacımız jeneratör kurulumuna gerek kalmadan güçlü ışık sağlamaktır.
+        TULPAR ekibi olarak deprem ve acil durumlarda
+        hızlı havadan aydınlatma sağlayan drone sistemi geliştiriyoruz.
     </p>
 </div>
 
-<!-- 2️⃣ SPONSORLUK PAKETLERİ -->
 <div class="section" id="sponsor">
-    <h2>Sponsorluk Paketleri</h2>
+    <h2>Sponsorluk</h2>
 
-    <div class="box-container">
+    <div class="box">
+        <p>Projemize destek olmak için sponsorluk dosyamızı inceleyebilirsiniz.</p>
 
-        <div class="box">
-            <h3>Bronz Sponsor</h3>
-            <p>Logo sosyal medya paylaşımlarında yer alır.</p>
-        </div>
+        <br>
 
-        <div class="box">
-            <h3>Gümüş Sponsor</h3>
-            <p>Logo drone üzerinde ve sunumlarda yer alır.</p>
-        </div>
-
-        <div class="box">
-            <h3>Altın Sponsor</h3>
-            <p>Ana sponsor olarak tüm platformlarda görünürlük sağlanır.</p>
-        </div>
-
+        <a href="./tulpar-sponsorluk-dosyasi.pdf" target="_blank">
+            <button>Sponsorluk Dosyasını Aç</button>
+        </a>
     </div>
-
-    <br><br>
-
-    <!-- PDF BUTONU -->
-    <a href="tulpar-sponsorluk-dosyasi.pdf" target="_blank">
-        <button>Sponsorluk Dosyasını Aç</button>
-    </a>
 
 </div>
 
